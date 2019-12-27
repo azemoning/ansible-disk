@@ -1,1 +1,1 @@
-*/5 * * * * root ansible-playbook disk-playbook.yml >> /var/log/ansible_disk.log 2>&1
+*/5 * * * * root checkdisk.sh >> /var/log/ansible_disk.log 2>&1
