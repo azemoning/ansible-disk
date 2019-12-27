@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ##disk space variable initiation
-$diskSpace = `python3 checkdisk.py`
+DISKSPACE = "$(python3 checkdisk.py 2>&1)"
 
 ## checking available disk space
 echo -e " "
@@ -10,8 +10,7 @@ sleep 2
 
 ## if available disk space is under 20 percent
 if python3 checkdisk.py < 20; then
-    echo -e " "
-    echo -e "available disk space = $diskSpace"
+    echo -e "available disk space = $DISKSPACE"
     sleep 1
     echo -e "performing docker prune on docker host"
     ansible-playbook docker-prune-playbook.yml
@@ -19,5 +18,5 @@ if python3 checkdisk.py < 20; then
 ## if available disk space is above 20 percent
 else
     echo -e " "
-    echo -e "available disk space = $diskSpace"
+    echo -e "available disk space = $DISKSPACE"
 fi
