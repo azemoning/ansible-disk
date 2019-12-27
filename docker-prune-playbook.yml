@@ -1,0 +1,6 @@
+---
+- hosts: dockerhost
+  tasks:
+    - name: performing docker prune on docker hosts
+      docker_prune:
+        images: yes
