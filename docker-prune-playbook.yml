@@ -1,6 +1,9 @@
 ---
 - hosts: dockerhost
   tasks:
-    - name: performing docker prune on docker hosts
+    - name: performing docker image prune on docker host
       shell:
-        cmd: docker image prune -a -f --filter "until=240h"
+        cmd: docker image prune -f -a --filter "until=240h"
+    - name: performing docker container prune on docker host
+      shell:
+        cmd: docker container prune -f
