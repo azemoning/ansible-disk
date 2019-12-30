@@ -53,6 +53,9 @@ if (($DISKSPACE < 10)); then
 
 If you want to change what the ansible playbook do if the disk space condition fulfilled, you can write your own ansible playbook and rebuild the base image for the ***deploy.dockerfile***.
 
+Go take a look at the ansible playbook guide:  
+https://docs.ansible.com/ansible/latest/user_guide/playbooks.html
+
 #### Configuring cron schedule
 To configure cron schedule, please refer to the official cron formatting.  
 Or you can go to https://crontab.guru/ to get a quick start about cron schedule expressions. 
