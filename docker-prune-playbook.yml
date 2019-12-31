@@ -3,7 +3,9 @@
   tasks:
     - name: performing docker image prune on docker host
       shell:
+        #executing docker image prune to prune all unused image more than 10 days old
         cmd: docker image prune -f -a --filter "until=240h"
     - name: performing docker container prune on docker host
       shell:
+        #executing docker container prune to prune all unused container
         cmd: docker container prune -f
