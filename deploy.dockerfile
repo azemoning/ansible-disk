@@ -1,4 +1,4 @@
-FROM azemoning/ansible-ubuntu:latest
+FROM azemoning/ansible-disk:latest
 ENV ANSIBLE_HOST='host'
 ENV ANSIBLE_USER='host-user'
 ENV ANSIBLE_PASSWORD='user-password'
